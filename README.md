@@ -15,4 +15,5 @@ SpringBoot 자동설정
 <h3>Database</h3>
 
 - Using Database for this project
-  - With docker h2, MariaDB, PostgresSQL
+  - Using tool Docker
+    - h2, MariaDB, PostgresSQL
