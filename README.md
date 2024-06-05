@@ -54,7 +54,15 @@ SpringBoot 자동설정
 2. Entity && JPARepository
 
 3. Seperate profiles
-
+  - create application-local (개발시 로컬 서버), application-dev(개발전 서버), application-prod (실제 서버)
+   1. application.yml
+    - ```
+      spring:
+        profiles:
+          active: dev
+      ```
+      로 active를 바꿔주기만 하면 사용가능하다.
+   2. 
 4. MyBatis
 
 5. Paging && Search
