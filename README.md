@@ -27,6 +27,14 @@ SpringBoot 자동설정
 - Add dependencies
   - Spring Data JPA
   - H2 Database
+    - Check connection to H2
+     1. Starting Server and connect to "http://localhost:8080/h2-console" as set in application.yml
+     2. put img
+     3. put img
+    * Occured error for "unable to store UUID in H2 with hibernate"
+     - model/post.java에 @GeneratedValue(strategy = GenerationType.IDENTITY) 으로 설정하니 UUID를 읽지 못해 테이블 생성이 불가!
+     - 해결방법
+      - @GeneratedValue(generator = "UUID") 로 바꿔서 다시 실행하니까 정상적으로 테이블이 만들어졌음!
   - MariaDB Driver
   - PostgreSQL Driver
   - MyBatis Framework

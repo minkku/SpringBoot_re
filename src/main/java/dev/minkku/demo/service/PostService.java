@@ -11,13 +11,9 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class PostService {
-    private final PostRepository PostRepository;
+    private final PostRepository postRepository;
 
     public List<Post> postList() {
-        return List.of(
-            new Post(UUID.randomUUID(), "title1", "contents2", "", LocalDateTime.now()),
-            new Post(UUID.randomUUID(), "title2", "contents2", "", LocalDateTime.now()),
-            new Post(UUID.randomUUID(), "title3", "contents2", "", LocalDateTime.now())
-        );
+        return postRepository.findAll();
     }
 }
